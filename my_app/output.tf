@@ -5,3 +5,7 @@ output "elb" {
 output "ecs-cluster" {
   value = aws_ecs_cluster.example-cluster.id
 }
+
+output "ec2_intance" {
+  value = aws_instance.my_instance.*.public_ip
+}

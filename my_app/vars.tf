@@ -1,5 +1,5 @@
 variable "AWS_REGION" {
-  default = "eu-west-1"
+  default = "eu-west-3"
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
@@ -7,7 +7,7 @@ variable "PATH_TO_PRIVATE_KEY" {
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "ssh_keys/mykey.pub"
+  default = "./ssh_keys/mykey.pub"
 }
 
 variable APP_VERSION {
@@ -25,9 +25,7 @@ variable "ECS_INSTANCE_TYPE" {
 variable "ECS_AMIS" {
   type = map(string)
   default = {
-    us-east-1 = "ami-1924770e"
-    us-west-2 = "ami-56ed4936"
-    eu-west-1 = "ami-0a74b180a0c97ecd1"
+    eu-west-3 = "ami-05d7e0c35c7d138c5"
   }
 }
 
